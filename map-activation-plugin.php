@@ -2,8 +2,8 @@
 /*
 Plugin Name: Map Activation Plugin
 Description: Вставка карт через шорткод с активацией по клику и адаптивным масштабированием.
-Version: 1.3
-Author: Aleskey Krivoshein
+Version: 1.4
+Author: Aleksey Krivoshein
 */
 
 if (!defined('ABSPATH')) {
@@ -69,6 +69,11 @@ function map_activation_plugin_options() {
             </table>
             <?php submit_button(); ?>
         </form>
+
+        <h2>Использование шорткода</h2>
+        <p>Чтобы вывести карту на странице или в записи, используйте следующий шорткод:</p>
+        <pre><code>[map_activation iframe="&lt;iframe src='URL_КАРТЫ' frameborder='0'&gt;&lt;/iframe&gt;" width="100%" height="400"]</code></pre>
+        <p>Если `iframe` не указан, будет использовано значение `src`, заданное в настройках.</p>
     </div>
 
     <?php
